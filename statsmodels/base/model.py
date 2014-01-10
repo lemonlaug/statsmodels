@@ -48,7 +48,7 @@ class Model(object):
     already stored in numpy arrays and it is changed then `endog` and `exog`
     will change as well.
     """ % {'params_doc' : _model_params_doc,
-            'extra_params_doc' : _missing_param_doc + _extra_param_doc}
+            'extra_params_doc' : '\n'.join[_missing_param_doc, _extra_param_doc]}
     def __init__(self, endog, exog=None, **kwargs):
         missing = kwargs.pop('missing', 'none')
         hasconst = kwargs.pop('hasconst', None)
